@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400,700" rel="stylesheet">
+    <title>Mad Libs Game</title>
+</head>
+<body>
+    <h1>MAD LIBS</h1>
+    <h2>generator</h2>
+    <p>Mad Libs are stories with certain types of words missing, which you fill in on your own; the results are hi-LARIOUS. Try putting in some of your own words (four per type of word, a comma between each word and NO SPACES), choose a story for them to be plugged into, then just hit generate!</p>    
+    <div id="word-types" class="user-input">
+        <label for="nouns">Nouns:</label>
+        <input type="text" name="word-type" id="nouns" class="input" placeholder="noun,noun,noun,noun">
+        <label for="adjectives">Adjectives:</label>
+        <input type="text" name="word-type" id="adjectives" class="input" placeholder="adjective,adjective,adjective,adjective">
+        <label for="verbs">Verbs:</label>
+        <input type="text" name="word-type" id="verbs" class="input" placeholder="verb,verb,verb,verb">
+        <label for="adverbs">Adverbs:</label>
+        <input type="text" name="word-type" id="adverbs" class="input" placeholder="adverb,adverb,adverb,adverb">
+    </div>
+    <div id="story-selection" class="user-input">
+        <label for="halloween">Halloween </label>
+        <input type="radio" name="story" id="halloween" value="halloween" class="radio">
+        <label for="story-2">Camping </label>
+        <input type="radio" name="story" id="camping" value="camping" class="radio">
+        <label for="story-3">The Awkward Date </label>
+        <input type="radio" name="story" id="awkward-date" value="awkward-date" class="radio">
+    </div>
+    <button id="generate" onClick="clickGenerate()">submit</button>
+    <div>
+        <p class="story" id="halloween-story">For Halloween this year I was a <span class="noun"></span>. I <span class="verb"></span> my costume myself it looked <span class="adjective"></span>. My friends all dressed as <span class="adjective"></span> <span class="noun"></span> and wanted to eat <span class="adverb"></span> instead of Trick or Treat. So I <span class="verb"></span> alone with my pufferfish <span class="adverb"></span>. Three hours later I was <span class="adverb"></span> <span class="adjective"></span> so I ate some <span class="noun"></span> and went home to <span class="verb"></span>. My pufferfish was wearing a mask to look like a(n) <span class="adjective"></span> <span class="noun"></span> which made me want to <span class="verb"></span> <span class="adverb"></span>.
+        </p>
+        <p class="story" id="camping-story">Jake and his friends went camping last weekend. When they <span class="verb"></span> at the campsite, the first thing they did was to <span class="adverb"></span> <span class="verb"></span> the <span class="noun"></span>. While setting up camp, Jake <span class="adverb"></span> dropped one of the tent <span class="noun"></span> in the river. The campground was incredibly <span class="adjective"></span>, with <span class="adjective"></span> views and plenty of <span class="adjective"></span> trails for hiking. Jake and his friends <span class="adverb"></span> biked, swam, and <span class="verb"></span> until dark. After dinner, they <span class="verb"></span> <span class="noun"></span> on the fire, and <span class="adverb"></span> sang campfire <span class="noun"></span>. It was a very <span class="adjective"></span> night.</p>
+        <p class="story" id="awkward-date-story">A few weeks ago, I <span class="adverb"></span> accepted my friend’s offer to set me up on a <span class="adjective"></span> date. Her friend <span class="verb"></span> me on the phone a few days later to <span class="verb"></span> the date. I felt so <span class="adjective"></span> arranging a date with a stranger that I <span class="verb"></span> and hung up as soon as I could. I <span class="adverb"></span> anticipated the date all week long. I had trouble choosing an outfit, but settled on wearing a <span class="noun"></span> and <span class="noun"></span> with sparkly heels to match. When my date arrived, he was very <span class="adjective"></span>, and <span class="verb"></span> the car door for me. I <span class="adverb"></span> sat in the passenger’s seat, trying to think of something to say. “Nice <span class="noun"></span>," I said <span class="adverb"></span> as he got into the car. At that, my cheeks grew <span class="adjective"></span> and I couldn’t speak without blushing for the rest of the <span class="noun"></span>.</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="data.js"></script>    
+</body>
+</html>
+
